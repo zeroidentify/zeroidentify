@@ -70,12 +70,12 @@ $( 'pre' ).text( $( 'pre' ).html() );
 
 var modal        = document.getElementById('modal'),
     modalContent = document.querySelector('.modal-content'),
-    openModal    = document.querySelector('.js-open-modal'),
+    //openModal    = document.querySelector('.js-open-modal'),
     closeModal   = document.querySelectorAll('.modal, .modal-close');
 
-openModal.addEventListener('click', function() {
-  modal.classList.add('is-visible');
-});
+//openModal.addEventListener('click', function() {
+  //modal.classList.add('is-visible');
+//});
 
 [].forEach.call(closeModal, function ( el ) {
    el.addEventListener('click', function() {
