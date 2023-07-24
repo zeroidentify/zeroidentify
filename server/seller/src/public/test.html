@@ -1,0 +1,50 @@
+
+<HTML>
+<BODY>
+    <table border=1>
+        <tr><td align="center">
+            <div id="zeroIDentify"
+                 identify_type     = "log_in"
+                 get_nonce_func    = "getnonce"
+                 button_click_func = "createSession"
+                 server_publickey  = "SERVER_PUBLICKEY" >
+            </div>
+            <script src='https://192.168.15.6:4433/identify_v0.8.js'></script>
+            <script>
+                function getnonce( callback ){
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', './get_nonce');
+                    xhr.onreadystatechange = () => {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            callback(xhr.responseText)
+                        } else if (xhr.status >= 307 && xhr.readyState === 4) {
+                            alert('error');
+                        }
+                    }
+                    xhr.send(null);
+                }
+                function createSession( client_id, message, message_signed_by_client ){
+                    console.log("createSession")
+
+                    // Send the idToken to the server for verification
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('POST', './create_session');
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log( "Verification successful" )
+                                window.location.href = './ok.html';
+                            } else {
+                                console.log('Create Session failed');
+                            }
+                        }
+                    };
+                    console.log( message_signed_by_client );
+                    xhr.send(JSON.stringify({ client_id, message, message_signed_by_client }));
+                }
+            </script>
+        </td></tr>
+    </table>
+</BODY>
+</HTML>

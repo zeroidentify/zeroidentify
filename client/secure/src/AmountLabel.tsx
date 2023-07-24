@@ -1,0 +1,1 @@
+../../identifycore/src/AmountLabel.tsx

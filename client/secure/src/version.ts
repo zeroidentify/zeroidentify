@@ -1,0 +1,1 @@
+../../identifycore/src/version.ts

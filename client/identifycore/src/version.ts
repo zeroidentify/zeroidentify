@@ -1,0 +1,1 @@
+export const ZEROIDENTIFY_VERSION="v0.8"

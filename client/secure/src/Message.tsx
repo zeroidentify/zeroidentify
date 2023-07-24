@@ -1,0 +1,1 @@
+../../identifycore/src/Message.tsx
