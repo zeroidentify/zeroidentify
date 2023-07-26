@@ -24,7 +24,7 @@ export class AccountSecurity {
             if ( publickey[0] === "Z" ) {
                 this.setPublickey(publickey)
             } else {
-                return [false, "your publickey is " + publickey + ".\n" + "publickey for zeroIDentify need to start with Z"]
+                return [false, "your publickey is " + publickey + ".\n" + "publickey for ZeroIDentify need to start with Z"]
             }
         } catch(e) {
             return [false, e.message]

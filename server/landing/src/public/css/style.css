@@ -110,7 +110,7 @@ b, strong
 h1
 {
   font-size: 46px;
-  font-weight: 100;
+  font-weight: Bold;
   text-transform: none;
   line-height: 46px;
   font-family: 'Arial';
@@ -118,22 +118,27 @@ h1
   margin-bottom: 0.33em;
 }
 
+.content
+{
+    padding-left: 1.5em;
+}
+
 h2
 {
-  font-size: 46px;
-  font-weight: 100;
-  line-height: 46px;
+  font-size: 36px;
+  font-weight: Medeium;
+  line-height: 36px;
   font-family: 'Arial';
-  margin-top: 0.33em;
+  margin-top: 0.43em;
+  margin-bottom: 0.33em;
 }
 
 h3
 {
-  font: 38px 'Arial';
-  font-weight: 300;
-  padding-bottom: 25px;
-  padding-top: 0px;
-  color: #202529;
+  font: 20px 'Arial';
+  font-weight: Medeum;
+  padding-bottom: 1px;
+  padding-top: 1px;
 }
 
 h4

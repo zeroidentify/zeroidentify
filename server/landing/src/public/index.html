@@ -92,11 +92,11 @@
         <div class="logo-phone centered"><img alt="YOURLOGO" src="img/logo-phone.png"></div>  <!-- This Logo is only displayed on Tablet/iPhone !-->  
                       
         <h1>Promise to provide zero your information when you sign up for sites.</h1>
-        <font color=#74BEE1>The website owner can offer a trial to visitors after verifying the user.</font>
+        <font color=#74BEE1>Authentication services that promise to provide no(zero) your information when you sign up for each site.</font>
                       
         <div class="space"></div>
 
-        <div id="zeroIDentify"
+        <div id="ZeroIDentify"
              identify_type     = "log_in"
              get_nonce_func    = "getnonce"
              button_click_func = "createSession"
@@ -166,9 +166,9 @@
 <!-- SECOND SECTION ############################################### -->
 
 
+
 <section class="page2">
 
-T.B.D. 
     <div class="row">
         
         <div class="six columns article make-it-appear-right">
@@ -204,11 +204,55 @@ T.B.D.
 
 <!-- TIRTH SECTION ############################################### -->
 
-
 <section class="page3" >
     <div class="row">
         
-        <div class="four columns article make-it-appear-right">
+        <!--<div class="four columns article make-it-appear-right">-->
+<h1>ZeroIDentify: Promise to Provide Zero Information When You Sign Up for Sites</h1>
+    <div class="content">ZeroIDentify is an identity service designed for the web. The core principle of ZeroIDentify is to ensure no personal data is disclosed during the process of signing up for any website or online service. The emphasis is on safeguarding end-users' privacy and confidentiality.
+        <h2>How Does ZeroIDentify Work?</h2>
+        <div class="content">ZeroIDentify employs a unique cryptographic methodology that operates with a root-private key and derived private keys to authenticate users while maintaining their anonymity.
+            <h3>The Root-private Key</h3>
+                <div class="content">Every user will create a random root-private key. This is the primary key that underpins their online identity and forms the basis for creating derived private keys. Users will only need to remember this one root-private key.</div>
+            <h3>Generation of Derived Private Keys</h3>
+                <div class="content">Whenever a user signs up for a new service, they generate a derived private key using the root-private key and a special rule described later. Importantly, the server they're signing up for cannot reverse-calculate to find the root-private key or derived private key. In essence, no personal information is shared during the sign-up process.</div>
+            <h3>Process of Creating Derived Private/Public Key</h3>
+                <div class="content">Here's the protocol for generating derived keys:
+                <pre>
+                1. User has private/public root key pair (r, R) where R = r·G.
+                2. Server has a domain name like domain.com
+                for ( i = 0; i++; ){
+                    User can compute a derived private key d using the ECDH: d = H(r+H(i)).
+                    User can compute a temporary derived public key D = dG
+                    If the first two letters of the string D match the first two letters of domain.com, D is the derived public key for the User to sign in the site for Server
+                }
+                </pre>
+                </div>
+        </div>
+        <h2>Merit for End-users</h2>
+            <div class="content">
+                <h3>No Traceability</h3>
+                    <div class="content">With ZeroIDentify, harmful sites where a user signs in only once will be unable to trace the user's ID. This anonymity is crucial in an era where user data is a prime target for hackers and marketers alike.</div>
+                <h3>Single Key Memory</h3>
+                    <div class="content">End-users only need to remember one root-private key. All other derived private keys can be regenerated using the root-private key. This ease of use makes managing multiple accounts and services hassle-free.</div>
+                <h3>Simplified User Experience</h3>
+                    <div class="content">The user experience is simplified to the point of simply clicking and waiting to create the derived key to sign in. After sign-in, users just click to login using the derived key stored in the browser's cookie.</div>
+            </div>
+        <h2>Merit for Service Providers</h2>
+            <div class="content">
+                <h3>Protection Against Cyber Attacks</h3>
+                    <div class="content">A further rule for derived private key creation ensures the generated public key starts with a word specified by the service provider. This computation takes several minutes, equivalent to bitcoin mining, which mitigates against attacks from hackers creating numerous accounts or bots scraping data.</div>
+                <h3>Easy Implementation</h3>
+                    <div class="content">Service providers can gain a large customer base by simply implementing ZeroIDentify. With the exponential growth in privacy-conscious users, this service offers an appealing proposition.</div>
+                <h3>Support Many Certifications ( Not yet implemented )</h3>
+                    <div class="content">ZeroIDentify plans to support customers who already have certification systems like Google's identity service and cryptocurrency wallets. This ability to work in conjunction with other systems allows for versatile use, broadening its appeal to potential users and providers.</div>
+                <h3>Decentralized Service ( Not yet implemented )</h3>
+                    <div class="content">ZeroIDentify moves towards supporting decentralized identifiers, known as DIDs. These digital identities are owned and controlled by the individual or organization to which they correspond, instead of being controlled by a centralized authority. Such decentralization enhances security and gives more control to the users. This service is preparing to support protocols such as IPFS and IPNS for decentralized identity services in the near future.</div>
+                <br><br>
+            </div>
+
+            As we progress towards a future that values online privacy and security, ZeroIDentify takes a pioneering step in realizing a decentralized web, where the user's identity and data are under their own control.
+        </div>
             <!-- Title --> 
             <!-- <h3>Server-side implementation is also easy</h3>-->
             <!-- <p>The code on the left is the entire sample code using Node, with the ZeroIdentify in test.html, and authentication from the client-client is done by the verify function. If the authentication fails, ok.html is displayed; if not, ng.html is displayed.</p>-->

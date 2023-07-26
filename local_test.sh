@@ -2,23 +2,28 @@
 set -eux
 
 if [ $# != 1 ] && [ $# != 2 ]; then
-    echo "usage: ./local_test.sh ThisHostIPAddress [landing]"
+    echo "usage: ./local_test.sh ThisHostIPAddress [unit|landing]"
     exit
 fi
 
 address=$1
 echo $address
-if [ $# = 2 ]; then
-    if [ $2 != "landing" ]; then
-        echo "usage: ./local_test.sh ThisHostIPAddress [landing]"
-        exit
+
+if [ $# = 1 ]; then
+    option="unit"
+elif [ $# = 2 ]; then
+    if [ $2 == "landing" ]; then
+        option="landing"
+    elif [ $2 == "unit" ]; then
+        option="unit"
+    else
+        if [ $2 != "landing" ]; then
+            echo "usage: ./local_test.sh ThisHostIPAddress [unit|landing]"
+            exit
+        fi
     fi
-    landing=$2
-    echo $landing
-else
-    landing="nothing"
 fi
-echo $landing
+echo $option
 
 
 git checkout ./server/seller/src/url.ts
@@ -27,7 +32,7 @@ sed -i "s/zeroidentify.com/$address:4433/g" ./server/seller/src/url.ts
 sed -i "s/zeroidentify.com/$address/g" ./server/landing/src/create_session.ts
 sed -i "s/secure: false,/secure: true,/g" ./server/landing/src/create_session.ts
 
-if [ $landing = "landing" ]; then
+if [ $option = "landing" ]; then
     git checkout ./server/landing/src/public/index.html
     sed -i "s/zeroidentify.com/$address:4433/g" ./server/landing/src/public/index.html
 fi
@@ -54,7 +59,7 @@ cd ../../
 
 echo "proxy start end"
 
-if [ $landing = "landing" ]; then
+if [ $option = "landing" ]; then
     cd ./server/landing/
     ./run.sh 44300
 else

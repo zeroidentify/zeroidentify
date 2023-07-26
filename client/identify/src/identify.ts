@@ -24,7 +24,7 @@ function postMessage(iframe:HTMLIFrameElement, msg: string){
 
 let iframe = document.createElement('iframe')
 iframe.src = SECURITY_SERVER + '/identify_core_v0.8.html'
-let zeroidentify:HTMLElement | null = document.getElementById('zeroIDentify')
+let zeroidentify:HTMLElement | null = document.getElementById('ZeroIDentify')
 zeroidentify!.appendChild(iframe)
 
 window.addEventListener('message', (event) => {
@@ -32,11 +32,11 @@ window.addEventListener('message', (event) => {
         return;
     }
     if ( event.data === 'zeroidentify_getidentifytype@'){
-        let el = document.getElementById("zeroIDentify")
+        let el = document.getElementById("ZeroIDentify")
         let type     = el!.getAttribute("identify_type")
         postMessage(iframe, 'identify_type=' + type );
     } else if ( event.data === 'zeroidentify_getparam@') {
-        let el = document.getElementById("zeroIDentify")
+        let el = document.getElementById("ZeroIDentify")
         let buttonclickfunc = el!.getAttribute("button_click_func")
         let getnoncefunc    = el!.getAttribute("get_nonce_func")
         let serverpublickey = el!.getAttribute("server_publickey")
