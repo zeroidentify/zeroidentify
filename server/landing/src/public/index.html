@@ -163,164 +163,61 @@
 <div id="container" class="container">
 
 
-<!-- SECOND SECTION ############################################### -->
-
-
-
-<section class="page2">
-
-    <div class="row">
-        
-        <div class="six columns article make-it-appear-right">
-        
-            <!-- Title --> 
-        
-            <!-- <h3>Very Easy Sign-up</h3>-->
-                        
-            <!-- Content --> 
-            
-            <!-- <p>Your clients can try out your products without having to bother with the Sign-up process. Once they Sign-up, they can try your products on other sites with one click Sign-in.  Clients need to create a solana address in advance starting with "VV..."(two V charactor). It takes several minutes to create an address starting with "VV...", and the client must pay the CPU cost. This is the same as mining Bitcoin. This prevents attackers from creating a large number of accounts and trying your prototype over and over again. Many current sign-up systems use CAPTCHAs or phone numbers to prevent from attackers. However, CAPTCHAs are cumbersome and submitting a phone number risks exposing personal information. </p>-->
-            <!-- <div class="space"></div>-->
-            
-        
-        </div>
-        
-        <!-- Image from right --> 
-    
-        <div class="five columns picture make-it-appear-left" >
-        
-            <!-- <img src="img/1.png" alt="EXEMPLE">-->
-        
-        </div>
-        
-    </div> <!-- End row div -->    
-
-</section>
-
-<!-- END SECOND SECTION ############################################### -->
-
-
-
-
 <!-- TIRTH SECTION ############################################### -->
 
 <section class="page3" >
     <div class="row">
-        
-        <!--<div class="four columns article make-it-appear-right">-->
-<h1>ZeroIDentify: Promise to Provide Zero Information When You Sign Up for Sites</h1>
-    <div class="content">ZeroIDentify is an identity service designed for the web. The core principle of ZeroIDentify is to ensure no personal data is disclosed during the process of signing up for any website or online service. The emphasis is on safeguarding end-users' privacy and confidentiality.
-        <h2>How Does ZeroIDentify Work?</h2>
-        <div class="content">ZeroIDentify employs a unique cryptographic methodology that operates with a root-private key and derived private keys to authenticate users while maintaining their anonymity.
-            <h3>The Root-private Key</h3>
-                <div class="content">Every user will create a random root-private key. This is the primary key that underpins their online identity and forms the basis for creating derived private keys. Users will only need to remember this one root-private key.</div>
-            <h3>Generation of Derived Private Keys</h3>
-                <div class="content">Whenever a user signs up for a new service, they generate a derived private key using the root-private key and a special rule described later. Importantly, the server they're signing up for cannot reverse-calculate to find the root-private key or derived private key. In essence, no personal information is shared during the sign-up process.</div>
-            <h3>Process of Creating Derived Private/Public Key</h3>
-                <div class="content">Here's the protocol for generating derived keys:
-                <pre>
-                1. User has private/public root key pair (r, R) where R = r·G.
-                2. Server has a domain name like domain.com
-                for ( i = 0; i++; ){
-                    User can compute a derived private key d using the ECDH: d = H(r+H(i)).
-                    User can compute a temporary derived public key D = dG
-                    If the first two letters of the string D match the first two letters of domain.com, D is the derived public key for the User to sign in the site for Server
-                }
-                </pre>
+        <h1>ZeroIDentify: Promise to Provide Zero Information When You Sign Up for Sites</h1>
+            <div class="content">ZeroIDentify is an identity service designed for the web. The core principle of ZeroIDentify is to ensure no personal data is disclosed during the process of signing up for any website or online service. The emphasis is on safeguarding end-users' privacy and confidentiality.
+            <h2>How Does ZeroIDentify Work?</h2>
+                <div class="content">ZeroIDentify employs a unique cryptographic methodology that operates with a root-private key and derived private keys to authenticate users while maintaining their anonymity.
+                    <h3>The Root-private Key</h3>
+                        <div class="content">Every user will create a random root-private key. This is the primary key that underpins their online identity and forms the basis for creating derived private keys. Users will only need to remember this one root-private key.</div>
+                    <h3>Generation of Derived Private Keys</h3>
+                        <div class="content">Whenever a user signs up for a new service, they generate a derived private key using the root-private key and a special rule described later. Importantly, the server they're signing up for cannot reverse-calculate to find the root-private key or derived private key. In essence, no personal information is shared during the sign-up process.</div>
+                    <h3>Process of Creating Derived Private/Public Key</h3>
+                        <div class="content">Here's the protocol for generating derived keys:
+                        <pre>
+                        1. User has private/public root key pair (r, R) where R = r·G.
+                        2. Server has a domain name like domain.com
+                        for ( i = 0; i++; ){
+                            User can compute a derived private key d using the ECDH: d = H(r+H(i)).
+                            User can compute a temporary derived public key D = dG
+                            If the first two letters of the string D match the first two letters of domain.com, D is the derived public key for the User to sign in the site for Server
+                        }
+                        </pre>
+                        </div>
                 </div>
-        </div>
-        <h2>Merit for End-users</h2>
-            <div class="content">
-                <h3>No Traceability</h3>
-                    <div class="content">With ZeroIDentify, harmful sites where a user signs in only once will be unable to trace the user's ID. This anonymity is crucial in an era where user data is a prime target for hackers and marketers alike.</div>
-                <h3>Single Key Memory</h3>
-                    <div class="content">End-users only need to remember one root-private key. All other derived private keys can be regenerated using the root-private key. This ease of use makes managing multiple accounts and services hassle-free.</div>
-                <h3>Simplified User Experience</h3>
-                    <div class="content">The user experience is simplified to the point of simply clicking and waiting to create the derived key to sign in. After sign-in, users just click to login using the derived key stored in the browser's cookie.</div>
+            <h2>Merit for End-users</h2>
+                <div class="content">
+                    <h3>No Traceability</h3>
+                        <div class="content">With ZeroIDentify, harmful sites where a user signs in only once will be unable to trace the user's ID. This anonymity is crucial in an era where user data is a prime target for hackers and marketers alike.</div>
+                    <h3>Single Key Memory</h3>
+                        <div class="content">End-users only need to remember one root-private key. All other derived private keys can be regenerated using the root-private key. This ease of use makes managing multiple accounts and services hassle-free.</div>
+                    <h3>Simplified User Experience</h3>
+                        <div class="content">The user experience is simplified to the point of simply clicking and waiting to create the derived key to sign in. After sign-in, users just click to login using the derived key stored in the browser's cookie.</div>
+                </div>
+            <h2>Merit for Service Providers</h2>
+                <div class="content">
+                    <h3>Protection Against Cyber Attacks</h3>
+                        <div class="content">A further rule for derived private key creation ensures the generated public key starts with a word specified by the service provider. This computation takes several minutes, equivalent to bitcoin mining, which mitigates against attacks from hackers creating numerous accounts or bots scraping data.</div>
+                    <h3>Easy Implementation</h3>
+                        <div class="content">Service providers can gain a large customer base by simply implementing ZeroIDentify. With the exponential growth in privacy-conscious users, this service offers an appealing proposition.</div>
+                    <h3>Support Many Certifications ( Not yet implemented )</h3>
+                        <div class="content">ZeroIDentify plans to support customers who already have certification systems like Google's identity service and cryptocurrency wallets. This ability to work in conjunction with other systems allows for versatile use, broadening its appeal to potential users and providers.</div>
+                    <h3>Decentralized Service ( Not yet implemented )</h3>
+                        <div class="content">ZeroIDentify moves towards supporting decentralized identifiers, known as DIDs. These digital identities are owned and controlled by the individual or organization to which they correspond, instead of being controlled by a centralized authority. Such decentralization enhances security and gives more control to the users. This service is preparing to support protocols such as IPFS and IPNS for decentralized identity services in the near future.</div>
+                    <br><br>
+                </div>
+
+                As we progress towards a future that values online privacy and security, ZeroIDentify takes a pioneering step in realizing a decentralized web, where the user's identity and data are under their own control.
             </div>
-        <h2>Merit for Service Providers</h2>
-            <div class="content">
-                <h3>Protection Against Cyber Attacks</h3>
-                    <div class="content">A further rule for derived private key creation ensures the generated public key starts with a word specified by the service provider. This computation takes several minutes, equivalent to bitcoin mining, which mitigates against attacks from hackers creating numerous accounts or bots scraping data.</div>
-                <h3>Easy Implementation</h3>
-                    <div class="content">Service providers can gain a large customer base by simply implementing ZeroIDentify. With the exponential growth in privacy-conscious users, this service offers an appealing proposition.</div>
-                <h3>Support Many Certifications ( Not yet implemented )</h3>
-                    <div class="content">ZeroIDentify plans to support customers who already have certification systems like Google's identity service and cryptocurrency wallets. This ability to work in conjunction with other systems allows for versatile use, broadening its appeal to potential users and providers.</div>
-                <h3>Decentralized Service ( Not yet implemented )</h3>
-                    <div class="content">ZeroIDentify moves towards supporting decentralized identifiers, known as DIDs. These digital identities are owned and controlled by the individual or organization to which they correspond, instead of being controlled by a centralized authority. Such decentralization enhances security and gives more control to the users. This service is preparing to support protocols such as IPFS and IPNS for decentralized identity services in the near future.</div>
-                <br><br>
-            </div>
-
-            As we progress towards a future that values online privacy and security, ZeroIDentify takes a pioneering step in realizing a decentralized web, where the user's identity and data are under their own control.
-        </div>
-            <!-- Title --> 
-            <!-- <h3>Server-side implementation is also easy</h3>-->
-            <!-- <p>The code on the left is the entire sample code using Node, with the ZeroIdentify in test.html, and authentication from the client-client is done by the verify function. If the authentication fails, ok.html is displayed; if not, ng.html is displayed.</p>-->
-            <!-- <div class="space"></div>-->
-        
-        </div>
-        
-        <!-- Image --> 
-    
-        <div class="seven columns picture make-it-appear-left" >
-            <!-- <pre>
-import * as https from 'https'
-import * as fs from 'fs'
-import { Request, Verifier, Verify_Request_Param } from './verifier';
-import assert from 'assert';
-
-let key  = fs.readFileSync('ssl/key.pem')
-let cert = fs.readFileSync('ssl/cert.pem')
-const options = { key, cert }
-
-let verifier = new Verifier( [] )
-
-let server = https.createServer(options, async function(request, response) {
-
-    console.log( request.url )
-
-    let rtnHtml = "not_found"
-    let staticHtml   = fs.readFileSync('test.html').toString()
-    let verifyOkHtml = fs.readFileSync('ok.html').toString()
-    let verifyNgHtml = fs.readFileSync('ng.html').toString()
-
-
-    if ( request.url === '/test.html' ){
-        rtnHtml = staticHtml
-    } else {
-        assert( request.url !== undefined )
-
-        if ( verifier.isRequestForPrepare(request.url) ){
-            rtnHtml = verifier.response( request.url )
-        } else {
-            if ( verifier.isRequestVerify(request.url) ){
-                if ( await verifier.verify( request.url ) == true ){
-                    console.log("  verify() === true")
-                    rtnHtml = verifyOkHtml
-                } else {
-                    console.log("  verify() === false")
-                    rtnHtml = verifyNgHtml
-                }
-            }
-        }
-
-    }
-
-    response.writeHead(200)
-    response.end(rtnHtml)
-})
-
-server.listen(443, () =>{
-    console.log("server start")
-})
-            </pre>-->
-        </div>
+        </div> 
     </div> <!-- End row div -->    
 
 </section>
 
 <!-- END TIRTH SECTION ############################################### -->
-
 
 
 <!-- Modal Window --> 
@@ -329,7 +226,6 @@ server.listen(443, () =>{
 
       <div class='modal-content modal-anim--three'>
       
-        <!--<iframe hidden=true src="//player.vimeo.com/video/64291127?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="560" height="306" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
     
       </div>
       
@@ -337,57 +233,6 @@ server.listen(443, () =>{
 
 
 
-<!-- FOURTH SECTION ############################################### -->
-
-
-
-<section class="page4">
-    <div class="row">
-
-        <!-- Image from left --> 
-    
-        <div class="five columns picture make-it-appear-right" >
-            <!--<img src="img/add_request.png" alt="EXEMPLE">-->
-        </div>
-
-
-        <div class="five columns article make-it-appear-left">
-        
-            <!-- Title --> 
-        
-            <!--<h3>Payment can be made using ZeroIdentify.</h3>-->
-                        
-            <!-- Content --> 
-            
-            <!-- <p>ZeroIDentify functions as a client's wallet because ZeroIdentify client secretkey. After the client pays the specified amount of money, seller can verifies the payment and provides the service. </p>-->
-                                
-            <div class="space"></div>
-            
-            <!-- <a class="js-open-modal button-green">Try it (Under Construction)</a> -->
-        
-        </div>
-                
-        
-    </div> <!-- End row div -->    
-
-
-</section>
-
-
-<!-- END FOURTH SECTION ############################################### -->
-
-
-
-<!-- FIFTH SECTION ############################################### -->
-
-
-<section class="page5">
-            
-
-</section>
-
-
-<!-- END FIFTH SECTION ############################################### -->
 
 
 <!-- FOOTER SECTION ############################################### -->
@@ -395,27 +240,12 @@ server.listen(443, () =>{
 
 <section class="footer">
 
+    <div class="row">
+        <div class="nine columns centered">
+            <img class="logo" src="img/logo.png" alt="Logo">
+        </div>
         
-            <div class="row">
-            
-                <!-- Article centered on the Page --> 
-        
-                <div class="nine columns centered">
-                
-                    <!-- Title --> 
-                                                                
-                    <!-- <p class="copyright">Showpage is a free app landing page made by <a href="http://www.iamsupview.be">Supview</a> and is under  <a href="http://creativecommons.org/licenses/by/4.0/">CC License</a> <br>© Copyright 2014 Supview. All rights reserved.</p>    -->
-    
-                    <!-- Logo --> 
-    
-    
-                    <img class="logo" src="img/logo.png" alt="Logo">
-    
-                </div>
-                
-        
-            </div>
-            
+    </div>
 
 </section>
 
@@ -438,16 +268,6 @@ server.listen(443, () =>{
   <script src="js/waypoints.min.js" type="text/javascript"></script>                        <!-- Waypoints -->
   <script src="js/jquery.scrollto.js" type="text/javascript"></script>                         <!-- ScrollTo -->    
   <script src="js/mediaCheck.js" type="text/javascript"></script>                             <!-- MediaCheck -->    
-
-
-  
-  <!-- Change UA-XXXXX-X to be your site's ID -->
-  <!--<script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>  -->
 
   </body>
   
