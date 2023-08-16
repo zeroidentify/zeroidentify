@@ -31,10 +31,10 @@ ZeroIDentify is an identity service designed for the web. The core principle of 
 ## Build & Installation
  \# git clone https://github.com/zeroidentify/zeroidentify.git
  \# cd zeroidentify/server/seller
- \# ./run.sh 443
+ \# ./demo_run.sh 443
  If your server IP address is 192.168.10.1, please acess https://192.168.10.1/sample.html
  If small window appears, the sample runs successfully.
 ## Demo Video
 
 ## Challenges
- 
+ I try to implement to use crypto currency wallet for the root private key, but I did not have time to implement. I will try to implement.
