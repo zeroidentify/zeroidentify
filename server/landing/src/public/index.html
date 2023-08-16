@@ -171,25 +171,25 @@
 <section class="page3" >
     <div class="row">
         <h1>ZeroIDentify: Promise to Provide Zero Information When You Sign Up for Sites</h1>
+
             <div class="content">ZeroIDentify is an identity service designed for the web. The core principle of ZeroIDentify is to ensure no personal data is disclosed during the process of signing up for any website or online service. The emphasis is on safeguarding end-users' privacy and confidentiality.
-            <h2>How Does ZeroIDentify Work?</h2>
+            <h2>How does ZeroIDentify Work?</h2>
                 <div class="content">ZeroIDentify employs a unique cryptographic methodology that operates with a root-private key and derived private keys to authenticate users while maintaining their anonymity.
                     <h3>The Root-private Key</h3>
                         <div class="content">Every user will create a random root-private key. This is the primary key that underpins their online identity and forms the basis for creating derived private keys. Users will only need to remember this one root-private key.</div>
                     <h3>Generation of Derived Private Keys</h3>
                         <div class="content">Whenever a user signs up for a new service, they generate a derived private key using the root-private key and a special rule described later. Importantly, the server they're signing up for cannot reverse-calculate to find the root-private key or derived private key. In essence, no personal information is shared during the sign-up process.</div>
                     <h3>Process of Creating Derived Private/Public Key</h3>
-                        <div class="content">Here's the protocol for generating derived keys:
-                        <pre>
-                        1. User has private/public root key pair (r, R) where R = r·G.
-                        2. Server has a domain name like domain.com
-                        for ( i = 0; i++; ){
-                            User can compute a derived private key d using the ECDH: d = H(r+H(i)).
-                            User can compute a temporary derived public key D = dG
-                            If the first two letters of the string D match the first two letters of domain.com, D is the derived public key for the User to sign in the site for Server
-                        }
-                        </pre>
-                        </div>
+                        <div class="content">Here's the protocol for generating derived keys:</div>
+<pre>
+1. User has private/public root key pair (r, R) where R = r·G.
+2. Server has a domain name like domain.com
+for ( i = 0; i++; ){
+  1. User can compute a derived private key d using the ECDH: d = H(r+H(i)).
+  2. User can compute a temporary derived public key D = dG
+  3. If the first two letters of the string D match the first two letters of domain.com, D is the derived public key for the User to sign in the site for Server
+}
+</pre>
                 </div>
             <h2>Merit for End-users</h2>
                 <div class="content">
@@ -212,10 +212,8 @@
                         <div class="content">ZeroIDentify moves towards supporting decentralized identifiers, known as DIDs. These digital identities are owned and controlled by the individual or organization to which they correspond, instead of being controlled by a centralized authority. Such decentralization enhances security and gives more control to the users. This service is preparing to support protocols such as IPFS and IPNS for decentralized identity services in the near future.</div>
                     <br><br>
                 </div>
-
                 As we progress towards a future that values online privacy and security, ZeroIDentify takes a pioneering step in realizing a decentralized web, where the user's identity and data are under their own control.
-            </div>
-        </div> 
+        </div>
     </div> <!-- End row div -->    
 
 </section>
