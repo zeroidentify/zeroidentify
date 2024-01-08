@@ -35,7 +35,7 @@ ZeroIDentify is an identity service designed for the web. The core principle of 
  
  \# ./demo_run.sh 443
  
- If your server IP address is 192.168.10.1, please acess https://192.168.10.1/sample.html
+ If your server IP address is 192.168.10.1, please access https://192.168.10.1/sample.html
  If small window appears, the sample runs successfully.
 ## Demo Video
 
