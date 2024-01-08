@@ -30,8 +30,11 @@ ZeroIDentify is an identity service designed for the web. The core principle of 
    ```
 ## Build & Installation
  \# git clone https://github.com/zeroidentify/zeroidentify.git
+ 
  \# cd zeroidentify/server/seller
+ 
  \# ./demo_run.sh 443
+ 
  If your server IP address is 192.168.10.1, please acess https://192.168.10.1/sample.html
  If small window appears, the sample runs successfully.
 ## Demo Video
